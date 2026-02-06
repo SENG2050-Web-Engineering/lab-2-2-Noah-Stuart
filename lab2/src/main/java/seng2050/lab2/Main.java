@@ -34,7 +34,7 @@ public class Main {
 
     // Add a servlet
     tomcat.addServlet("", "HelloWorldServlet", new HelloWorldServlet());
-    
+
     // Map the servlet
     ctx.addServletMappingDecoded("/HelloWorld", "HelloWorldServlet");
 
