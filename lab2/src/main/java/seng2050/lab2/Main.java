@@ -34,9 +34,27 @@ public class Main {
 
     // Add a servlet
     tomcat.addServlet("", "HelloWorldServlet", new HelloWorldServlet());
-    
+
     // Map the servlet
     ctx.addServletMappingDecoded("/HelloWorld", "HelloWorldServlet");
+
+    // add simple message servlet
+    tomcat.addServlet("", "SimpleMessage", new SimpleMessage());
+
+    // map simple message servlet
+    ctx.addServletMappingDecoded("/SimpleMessage", "SimpleMessage");
+
+    // add html generator
+    tomcat.addServlet("", "generateValidHTML", new generateValidHTML());
+
+    // map hmtl generator
+    ctx.addServletMappingDecoded("/generateValidHTML", "generateValidHTML");
+
+    // add greetings
+    tomcat.addServlet("", "GreetingServlet", new GreetingServlet());
+
+    // map greetings
+    ctx.addServletMappingDecoded("/GreetingServlet", "GreetingServlet");
 
     // Start Tomcat
     try {
